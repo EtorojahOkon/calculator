@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>My Calculator </title>
+
+<meta name= "viewport" content= "width=device-width, initial scale=1.0">
+
+<style>
+form{
+	background-color: blue;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-style : solid;
+	border-color: black;
+	width:250px;
+}
+
+.panel{
+	background-color: white;
+	display: inline-block;
+	border-style: solid;
+	color: red;
+	margin:10px;
+	font-family: courier;
+}
+
+table{
+	border: 1px solid black;
+	margin:10px;
+	background-color:white;
+}
+
+td, tr{
+	text-align: center;
+	padding: 8.7px;
+}
+
+input:hover{
+color:blue;
+
+}
+
+.all-clear{
+	background-color: crimson;
+}
+
+.display{
+	width: 220px;
+	height: 30px;
+	text-align: right;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.operator{
+	background-color: aqua;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+
+
+<form name= "calculator">
+
+
+<div class= "panel">
+ <input type="text" class="display" name= "display" id= "display" disabled>
+ </div>
+ 
+ <table>
+	 <tr>
+		<td>
+			<input type= "button" name= "neg" value= "-|" onclick= "calculator.display.value += '**(-1)' ">
+			</td>
+
+		<td>
+			<input type ="button" name= "percent" value= "%" onclick= "calculator.display.value=eval((calculator.display.value)/100)">
+			 </td>
+			 
+		<td>
+			<input type= "button" class= "all-clear" name= "all-clear" value= "AC" onclick= "calculator.display.value = '0' ">
+			</td>
+
+		<td>
+			<input type= "button" class= "all-clear" name= "all-clear" value= "OFF" onclick= "calculator.display.value = ' ' ">
+			</td>
+	 </tr>
+	 <tr>
+		<td>
+			<input type ="button" name= "sin" value= "sin" onclick= "calculator.display.value=eval(Math.sin(calculator.display.value*(3.142/180)))" >
+			 </td>
+		
+			 <td>
+				<input type ="button" name= "cos" value= "cos" onclick= "calculator.display.value=eval(Math.cos(calculator.display.value*(3.142/180)))">
+				 </td>
+		
+				 <td>
+					<input type ="button" name= "tan" value= "tan" onclick= "calculator.display.value=eval(Math.tan(calculator.display.value))">
+					 </td>
+				
+			<td>
+				<input type ="button" name= "log" value= "log" onclick= "calculator.display.value=eval(Math.log10(calculator.display.value))">
+				 </td>
+			
+	 </tr>
+ <tr>
+ <td>
+ <input type= "button" name= "seven" value= "7" onclick= "calculator.display.value += '7' ">
+ </td>
+ 
+ 
+  <td>
+ <input type= "button" name= "eight" value= "8" onclick= "calculator.display.value += '8' ">
+ </td>
+ 
+  <td>
+ <input type= "button" name= "nine" value= "9" onclick= "calculator.display.value += '9' ">
+ </td>
+ 
+  <td>
+ <input type= "button" class= "operator" name= "divide" value= "/" onclick= "calculator.display.value += '/' ">
+ </td>
+ </tr>
+ 
+ 
+ <tr>
+ <td>
+ <input type= "button" name= "four" value= "4" onclick= "calculator.display.value += '4' ">
+ </td>
+ 
+ 
+  <td>
+ <input type= "button" name= "five" value= "5" onclick= "calculator.display.value += '5' ">
+ </td>
+ 
+  <td>
+ <input type= "button" name= "six" value= "6" onclick= "calculator.display.value += '6' ">
+ </td>
+ 
+  <td>
+ <input type= "button" class= "operator" name= "multiply" value= "x" onclick= "calculator.display.value += '*' ">
+ </td>
+ </tr>
+ 
+ 
+ <tr>
+ <td>
+ <input type= "button" name= "one" value= "1" onclick= "calculator.display.value += '1' ">
+ </td>
+ 
+ 
+  <td>
+ <input type= "button" name= "two" value= "2" onclick= "calculator.display.value += '2' ">
+ </td>
+ 
+  <td>
+ <input type= "button" name= "three" value= "3" onclick= "calculator.display.value += '3' ">
+ </td>
+ 
+  <td>
+ <input type= "button" class= "operator" name= "minus" value= "-" onclick= "calculator.display.value += '-' ">
+ </td>
+ </tr>
+ 
+ <tr>
+ 
+ 
+  <td>
+ <input type= "button" name= "zero" value= "0" onclick= "calculator.display.value += '0' ">
+ </td>
+ 
+  <td>
+ <input type= "button" name= "decimal" value= "." onclick= "calculator.display.value += '.' ">
+ </td>
+
+ <td>
+	<input type= "button" class= "exponent" name= "exponent" value= "^" onclick= "calculator.display.value += '**' ">
+	</td>
+ 
+  <td>
+ <input type= "button" class= "operator" name= "plus" value= "+" onclick= "calculator.display.value += '+' ">
+ </td>
+ </tr>
+ 
+ <tr>
+	<td>
+		<input type= "button" name= "power" value= "E" onclick= "calculator.display.value += '*10**' ">
+		</td>
+	
+		
+		<td>
+			<input type= "button" name= "pi" value= "Pi" onclick= "calculator.display.value += '22/7' ">
+			</td>
+	
+		<td>
+			<input type ="button" name= "root" value= "sqrt" onclick= "calculator.display.value=eval(Math.sqrt(calculator.display.value))">
+			 </td>
+		
+ <td>
+<input type ="button" class="operator" name= "equals" value= "=" onclick= "calculator.display.value=eval(calculator.display.value)">
+ </td>
+ </tr>
+ 
+</table>
+ </form>
+ 
+ 
+ </body>
+ </html>
+ 
